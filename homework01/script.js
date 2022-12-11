@@ -61,13 +61,13 @@ console.log("Income:", Number(((s / 2) - calculateSale).toFixed(2)));
 
 //Створіть шаблонний рядок та виведіть всі обчислення вчинені в Base частині домашнього
 //завдання
-const result = `Максимальна ціна: ${ a } </br>
-    Мінімальна ціна: ${ b } </br >
-    Сума всіх товарів: ${ s } </br >
-    Сума товарів з округленням: ${ rounded } </br >
+const result = `Максимальна ціна: ${a} </br>
+    Мінімальна ціна: ${b} </br >
+    Сума всіх товарів: ${s} </br >
+    Сума товарів з округленням: ${rounded} </br >
     Сума товарів округлена до сотень: ${Math.ceil(rounded / 100) * 100} </br>
     Булеве значення: ${roundedBoolean} </br>
     Сума решти: ${500 - s} </br>
     Середнє значення цін з округленням: ${Number((s / 3).toFixed(2))} </br>
-    Чистий прибуток: ${Number(((s / 2) - calculateSale).toFixed(2))}`
+    Чистий прибуток: ${Number(((s / 2) - calculateSale).toFixed(2))}`;
 console.log(result);
