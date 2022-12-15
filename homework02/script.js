@@ -12,14 +12,18 @@ while (isNaN(M) || !Number.isInteger(M)) {
 }
 
 let numberToSkip = confirm("Do you want to skip even numbers?");
+
 let sum = 0;
+
 for (N; N <= M; N++) {
     if (numberToSkip) {
-        if (!(N % 2 === 0)) {
+        if (N % 2 != 0) {
             sum += N;
         }
-    } else {
-        sum += N;
+        else {
+            sum += N;
+        }
     }
-    console.log(`Sum is: = ${sum}`);
 }
+        document.writeln(`<h1>`, `Sum of numbers is: ${sum}`, `</h1`);
+
