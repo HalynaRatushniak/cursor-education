@@ -21,8 +21,13 @@ function mathPow(num, pow) {
 
 //Func.3
 function formatName(name) {
-        return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-    }
+  let rightName = name.toLowerCase().trim();
+  let firstLetter = rightName[0].toUpperCase();
+  rightName = rightName.replace(rightName[0], firstLetter);
+  return rightName;
+}
+    console.log(formatName(" vLad"));
+
 
 //Func.4
 function getRandomNumber(N, M) {
@@ -52,7 +57,7 @@ function getRandomPassword(passwordLength = 8) {
 
 document.writeln(`<p> Func.1: Найбільша цифра: ${getMaxDigit(1236)} </p>`);
 document.writeln(`<p> Func 2: Ступінь числа : ${ mathPow(2, 4)} </p>`);
-document.writeln(`<p> Func 3: Відформатоване імя: ${formatName('іВан')} </p>`);
+document.writeln(`<p> Func 3: Відформатоване імя: ${formatName(' іВан')} </p>`);
 document.writeln(`<p> Func.4: Рандомне число: ${getRandomNumber(1, 100)} </p>`);
 document.writeln(`<p> Func.5: Повторення літери: ${countLetter("е", "Неперевершений")} </p>`);
 document.writeln(`<p> Func.6: Рандомний пароль: ${ getRandomPassword(8) } </p>`);
