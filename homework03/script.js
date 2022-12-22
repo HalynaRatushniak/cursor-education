@@ -26,7 +26,6 @@ function formatName(name) {
   rightName = rightName.replace(rightName[0], firstLetter);
   return rightName;
 }
-    console.log(formatName(" vLad"));
 
 
 //Func.4
