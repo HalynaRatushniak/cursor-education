@@ -12,17 +12,17 @@ function getAverage(...numbers) {
     });
     let averageNum = sum / len;
     return Number(averageNum.toFixed(2));
-    // for (let i = 0; i < len; i++){
-    //     sum += numbers[i];
-    // }
 };
 console.log(getAverage(1, 4, 6.3, 3, 9.8, 8, 67, 34, 2));
 
 //Func.4
 function getMedian(...numbers) {
-        const mid = Math.floor(numbers.length / 2);
-        nums = [...numbers].sort((a, b) => a - b);
-        return numbers.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
+    return numbers.reduce((acc, number) => {
+        if (Number.isInteger(number)) {
+            acc += number;
+        }
+        return acc;
+    }) / numbers.length;
     }
 console.log(getMedian(3, 5, 7, 8, 9));
 
