@@ -5,24 +5,20 @@ const getRandomArray = (length, min, max) =>
 
 //Func.3
 function getAverage(...numbers) {
-    let sum = 0;
-    const len = numbers.length;
-    const numInteger = numbers.filter((n) => Number.isInteger(n)).map((num) => {
-        sum += num;
-    });
-    let averageNum = sum / len;
-    return Number(averageNum.toFixed(2));
-};
-console.log(getAverage(1, 4, 6.3, 3, 9.8, 8, 67, 34, 2));
-
-//Func.4
-function getMedian(...numbers) {
     return numbers.reduce((acc, number) => {
         if (Number.isInteger(number)) {
             acc += number;
         }
         return acc;
     }) / numbers.length;
+}
+console.log(getAverage(1, 4, 6.3, 3, 9.8, 8, 67, 34, 2));
+
+//Func.4
+function getMedian(...numbers) {
+        const mid = Math.floor(numbers.length / 2);
+        nums = [...numbers].sort((a, b) => a - b);
+        return numbers.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
     }
 console.log(getMedian(3, 5, 7, 8, 9));
 
