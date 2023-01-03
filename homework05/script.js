@@ -5,12 +5,13 @@ const getRandomArray = (length, min, max) =>
 
 //Func.3
 function getAverage(...numbers) {
-    return numbers.reduce((acc, number) => {
+    let result=( numbers.reduce((acc, number) => {
         if (Number.isInteger(number)) {
             acc += number;
         }
         return acc;
-    }) / numbers.length;
+    }) / numbers.length);
+    return Number(result.toFixed(2));
 }
 console.log(getAverage(1, 4, 6.3, 3, 9.8, 8, 67, 34, 2));
 
