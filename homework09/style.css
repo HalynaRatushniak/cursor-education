@@ -1,0 +1,11 @@
+.mainBlock {
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px auto;
+}
+
+.smallBlock {
+    width: 50px;
+    height: 50px;
+}
