@@ -1,7 +1,7 @@
 
 function playSound(e) {
     const sound = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    const keyButton = document.querySelector(`.key[data-key="${e.keyCode}"]`).classList.add('playing');
+    const keyButton = document.querySelector(`.key[data-key="${e.keyCode}"]`);
 
     if (!sound) return;
     sound.currentTime = 0;
