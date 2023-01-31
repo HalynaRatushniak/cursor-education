@@ -150,6 +150,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: calc(100% - 150px);
+  justify-content: space-between;
 }
 
 .planets.inactive h2,

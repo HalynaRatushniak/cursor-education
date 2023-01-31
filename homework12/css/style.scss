@@ -132,6 +132,7 @@ body {
         display: flex;
         flex-wrap: wrap;
         width: calc(100% - 150px);
+        justify-content: space-between;
     }
     &.inactive {
         h2,
