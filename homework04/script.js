@@ -3,7 +3,7 @@ const themes = ["Диференційне рівняння", "Теорія ав�
 const marks = [4, 5, 5, 3, 4, 5];
 
 //1
-function getPairs(students = []) {
+export function getPairs(students = []) {
     const girls = [];
     girls.push(students[2], students[3], students[5]);
     const boys = [];
@@ -13,9 +13,10 @@ function getPairs(students = []) {
     for (let i = 0; i < girls.length; i++) {
         result.push([girls[i], boys[i]]);
     }
+    console.log(result);
     return result;
 }
-console.log(getPairs(students));
+getPairs(students);
 
 //2
 function getThemes(arrPair = [], themes = []) {
@@ -41,10 +42,12 @@ console.log(getMarks(students, marks));
 //4
 function getRandomMarks(array = []) {
     let result = [];
-    for (i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         let randomMark = Math.floor(Math.random() * (5 - 1) + 1);
         result.push([array[i][0], array[i][1], randomMark]);
     }
     return result;
 }
 console.log(getRandomMarks(getThemes((getPairs(students)), themes)));
+
+ 

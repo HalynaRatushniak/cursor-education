@@ -54,6 +54,8 @@ function getRandomPassword(passwordLength = 8) {
     return randomPassword;
 }
 
+export { getRandomPassword };
+
 document.writeln(`<p> Func.1: Найбільша цифра: ${getMaxDigit(1236)} </p>`);
 document.writeln(`<p> Func 2: Ступінь числа : ${ mathPow(2, 4)} </p>`);
 document.writeln(`<p> Func 3: Відформатоване імя: ${formatName(' іВан')} </p>`);
